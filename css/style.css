@@ -186,8 +186,8 @@ html {
 
 @media only screen and (max-width: 375px) {
   .article__right__active__state-mobile {
-    width: 133%; } }
+    width: 135%; } }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 350px) {
   .article__right__active__state-mobile {
     width: 135%; } }
