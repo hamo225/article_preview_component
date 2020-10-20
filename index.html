@@ -45,6 +45,17 @@
                             <img src="/images/icon-pinterest.svg" alt="">
                         </div>
                     </div>
+                    <div class="article__right__share-mobile">
+                        <img src="/images/icon-share.svg" alt="" id="shareBtnMobile">
+                     <div class="article__right__active__state-mobile">
+                         <h5>SHARE</h5>
+                         <div class="icons">
+                         <img src="/images/icon-facebook.svg" alt="">
+                         <img src="/images/icon-twitter.svg" alt="">
+                         <img src="/images/icon-pinterest.svg" alt="">
+                        </div>
+                     </div>
+                 </div>
                 </div>
             </div>
         </div>
@@ -53,11 +64,22 @@
 
     <script>
 let shareButton = document.querySelector('#shareBtn');
+let mobileShareButton = document.querySelector('#shareBtnMobile');
 let sharePopUp = document.querySelector('.article__right__active__state');
+let sharePopUpMobile = document.querySelector('.article__right__active__state-mobile');
+
 
 shareButton.addEventListener('click', function () {
     sharePopUp.style.display = 'flex';
 });
+
+mobileShareButton.addEventListener('click', function () {
+    sharePopUpMobile.style.display = 'flex';
+});
+
+
+
+
 
 
     </script>

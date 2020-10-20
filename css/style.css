@@ -40,7 +40,6 @@ html {
   font-family: var(--font-family); }
 
 .main {
-  width: 100vw;
   height: 100vh;
   background-color: var(--light-grayish-blue);
   display: flex;
@@ -98,6 +97,8 @@ html {
       background-color: var(--light-grayish-blue);
       padding: 0.5rem;
       border-radius: 50%; }
+  .article__right__share-mobile {
+    display: none; }
   .article__right__active__state {
     background-color: var(--very-dark-blue);
     display: none;
@@ -139,3 +140,54 @@ html {
     width: 50%;
     border-radius: 20px;
     display: none; }
+
+@media only screen and (max-width: 500px) {
+  .main {
+    margin-bottom: 5rem; }
+    .main__article {
+      flex-direction: column;
+      width: 90%; }
+  .article__right {
+    width: 100%; }
+    .article__right__share {
+      display: none; }
+    .article__right__share-mobile {
+      display: flex; }
+    .article__right__active__state-mobile {
+      display: none;
+      justify-content: space-evenly;
+      background-color: var(--very-dark-blue);
+      width: 121.5%;
+      border-radius: 0px 0px 10px 10px;
+      position: absolute;
+      top: 0;
+      left: -3.5rem; }
+      .article__right__active__state-mobile,
+      .article__right__active__state-mobile img {
+        background-color: var(--very-dark-blue);
+        padding: 1rem 0.5rem; }
+      .article__right__active__state-mobile,
+      .article__right__active__state-mobile h5 {
+        color: var(--grayish-blue);
+        font-size: var(--font-size);
+        letter-spacing: 0.2rem;
+        margin-right: 1rem;
+        margin-left: 1rem;
+        font-weight: var(--font-weight-1); }
+  .article__left {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    border-radius: 20px 20px 0px 0px; } }
+
+@media only screen and (max-width: 450px) {
+  .article__right__active__state-mobile {
+    width: 125%; } }
+
+@media only screen and (max-width: 375px) {
+  .article__right__active__state-mobile {
+    width: 131%; } }
+
+@media only screen and (max-width: 375px) {
+  .article__right__active__state-mobile {
+    width: 135%; } }
