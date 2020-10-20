@@ -1,0 +1,165 @@
+/* Colors
+Very Dark Grayish Blue: hsl(217, 19%, 35%)
+Desaturated Dark Blue: hsl(214, 17%, 51%)
+Grayish Blue: hsl(212, 23%, 69%)
+Light Grayish Blue: hsl(210, 46%, 95%)
+
+Typography
+
+Body
+Font size: 13px
+
+Headings
+Family: [Manrope](https://fonts.google.com/specimen/Manrope)
+Weights: 500, 700
+
+Icons
+[Font Awesome](https://fontawesome.com)
+[IcoMoon](https://icomoon.io)
+[Ionicons](https://ionicons.com)
+*/
+
+
+:root {
+
+    --very-dark-blue: hsl(217, 19%, 35%);
+    --desaturated-blue: hsl(214, 17%, 51%);
+    --grayish-blue: hsl(212, 23%, 69%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+
+    --font-size-small: 10px;
+    --font-size: 13px;
+    --font-size-large: 20px;
+
+
+    --font-family: 'Manrope', sans-serif;
+    --font-weight-1: 500;
+    --font-weight-2: 700;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+}
+
+.main {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--light-grayish-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    &__article {
+        background-color: white;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 50%;
+
+    }
+}
+
+
+.article__right {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    padding: 1rem 2.5rem;
+
+    &__header,
+    h1 {
+        color: var(--very-dark-blue);
+        font-weight: var(--font-weight-2);
+        line-height: 2rem;
+
+    }
+
+    &__description {
+        color: var(--desaturated-blue);
+        line-height: 1.4rem;
+        margin-top: -15px;
+        margin-bottom: 0.7rem;
+        font-size: var(--font-size);
+    }
+
+
+    &__details {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+
+        &__info {
+            display: flex;
+            align-items: center;
+            // background-color: aqua;
+        }
+
+    }
+
+    &__image {
+        width: 15%;
+
+        & img {
+            width: 100%;
+            border-radius: 50%;
+        }
+    }
+
+    &__name {
+        margin-left: 1rem;
+
+        &__name,
+        p {
+            margin: 0.1rem;
+            font-size: var(--font-size);
+            color: var(--very-dark-blue);
+
+        }
+
+        &__date p {
+            color: var(--grayish-blue);
+
+        }
+    }
+
+    &__active__state {
+        display: none;
+    }
+
+    &__share {
+        justify-content: center;
+
+        & img {
+            background-color: var(--light-grayish-blue);
+            padding: 0.5rem;
+            border-radius: 50%;
+        }
+
+    }
+
+}
+
+.article__left {
+
+    width: 40%;
+    background-image: url(/images/drawers.jpg);
+    background-size: cover;
+    border-radius: 20px 0 0 20px;
+
+    & img {
+        width: 50%;
+        border-radius: 20px;
+        display: none;
+    }
+}

@@ -1,0 +1,111 @@
+/* Colors
+Very Dark Grayish Blue: hsl(217, 19%, 35%)
+Desaturated Dark Blue: hsl(214, 17%, 51%)
+Grayish Blue: hsl(212, 23%, 69%)
+Light Grayish Blue: hsl(210, 46%, 95%)
+
+Typography
+
+Body
+Font size: 13px
+
+Headings
+Family: [Manrope](https://fonts.google.com/specimen/Manrope)
+Weights: 500, 700
+
+Icons
+[Font Awesome](https://fontawesome.com)
+[IcoMoon](https://icomoon.io)
+[Ionicons](https://ionicons.com)
+*/
+:root {
+  --very-dark-blue: hsl(217, 19%, 35%);
+  --desaturated-blue: hsl(214, 17%, 51%);
+  --grayish-blue: hsl(212, 23%, 69%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+  --font-size-small: 10px;
+  --font-size: 13px;
+  --font-size-large: 20px;
+  --font-family: 'Manrope', sans-serif;
+  --font-weight-1: 500;
+  --font-weight-2: 700; }
+
+* {
+  box-sizing: border-box; }
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family); }
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--light-grayish-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .main__article {
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%; }
+
+.article__right {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  padding: 1rem 2.5rem; }
+  .article__right__header,
+  .article__right h1 {
+    color: var(--very-dark-blue);
+    font-weight: var(--font-weight-2);
+    line-height: 2rem; }
+  .article__right__description {
+    color: var(--desaturated-blue);
+    line-height: 1.4rem;
+    margin-top: -15px;
+    margin-bottom: 0.7rem;
+    font-size: var(--font-size); }
+  .article__right__details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .article__right__details__info {
+      display: flex;
+      align-items: center; }
+  .article__right__image {
+    width: 15%; }
+    .article__right__image img {
+      width: 100%;
+      border-radius: 50%; }
+  .article__right__name {
+    margin-left: 1rem; }
+    .article__right__name__name,
+    .article__right__name p {
+      margin: 0.1rem;
+      font-size: var(--font-size);
+      color: var(--very-dark-blue); }
+    .article__right__name__date p {
+      color: var(--grayish-blue); }
+  .article__right__active__state {
+    display: none; }
+  .article__right__share {
+    justify-content: center; }
+    .article__right__share img {
+      background-color: var(--light-grayish-blue);
+      padding: 0.5rem;
+      border-radius: 50%; }
+
+.article__left {
+  width: 40%;
+  background-image: url(/images/drawers.jpg);
+  background-size: cover;
+  border-radius: 20px 0 0 20px; }
+  .article__left img {
+    width: 50%;
+    border-radius: 20px;
+    display: none; }
