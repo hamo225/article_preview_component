@@ -97,6 +97,8 @@ html {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: relative;
+
 
 
         &__info {
@@ -133,14 +135,11 @@ html {
         }
     }
 
-    &__active__state {
-        display: none;
-    }
 
     &__share {
         justify-content: center;
 
-        & img {
+        & img:first-child {
             background-color: var(--light-grayish-blue);
             padding: 0.5rem;
             border-radius: 50%;
@@ -148,6 +147,46 @@ html {
 
     }
 
+    &__active__state {
+        background-color: var(--very-dark-blue);
+        display: none;
+        width: 100%;
+        width: 65%;
+        border-radius: 10px;
+        position: absolute;
+        top: -7rem;
+        right: -7rem;
+        padding: 13px;
+
+        &,
+        img {
+            background-color: var(--very-dark-blue);
+            padding: 20px 0.5rem;
+
+        }
+
+        &,
+        h5 {
+            color: var(--grayish-blue);
+            font-size: var(--font-size);
+            letter-spacing: 0.2rem;
+            margin-right: 1rem;
+            margin-left: 1rem;
+            font-weight: var(--font-weight-1);
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 98%;
+            left: 6rem;
+            border-top: 20px solid;
+            border-top-color: var(--very-dark-blue);
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+        }
+
+    }
 }
 
 .article__left {
